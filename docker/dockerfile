@@ -1,0 +1,10 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY python/monitor.py .
+COPY logs/sample.log .
+
+RUN pip install pyyaml
+
+CMD ["python", "monitor.py"]

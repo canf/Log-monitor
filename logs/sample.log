@@ -1,0 +1,46 @@
+Apr 10 08:15:01 server1 systemd[1]: Started Daily apt download activities.
+Apr 10 08:15:02 server1 kernel: [12345.678901] CPU0: Core temperature above threshold
+Apr 10 08:15:05 server1 sshd[1023]: Accepted password for user1 from 192.168.1.10 port 54321 ssh2
+Apr 10 08:15:07 server1 sshd[1023]: error: Failed password for invalid user admin from 192.168.1.15 port 53422 ssh2
+Apr 10 08:15:10 server1 nginx[2045]: 200 OK GET /index.html
+Apr 10 08:15:12 server1 nginx[2045]: 500 Internal Server Error: upstream timeout
+Apr 10 08:15:15 server1 app[3301]: INFO User login successful: user1
+Apr 10 08:15:18 server1 app[3301]: ERROR Database connection failed
+Apr 10 08:15:20 server1 app[3301]: WARNING Retry attempt 1 for database connection
+Apr 10 08:15:23 server1 app[3301]: CRITICAL Service unavailable after retries
+Apr 10 08:15:25 server1 postgres[2211]: LOG: connection received: host=127.0.0.1 port=5432
+Apr 10 08:15:27 server1 postgres[2211]: ERROR: relation "users" does not exist
+Apr 10 08:15:30 server1 kernel: [12346.123456] Out of memory: Kill process 3301 (app) score 987 or sacrifice child
+Apr 10 08:15:32 server1 systemd[1]: app.service: Failed with result 'signal'
+Apr 10 08:15:35 server1 systemd[1]: app.service: Scheduled restart job, restart counter is at 3
+Apr 10 08:15:37 server1 systemd[1]: Started app.service
+Apr 10 08:15:40 server1 docker[4123]: Container app restarted
+Apr 10 08:15:42 server1 docker[4123]: ERROR: failed to start container due to network timeout
+Apr 10 08:15:45 server1 networkd[998]: eth0: DHCP lease lost
+Apr 10 08:15:47 server1 networkd[998]: WARNING: reconnecting to DHCP server
+Apr 10 08:15:50 server1 networkd[998]: INFO: DHCP lease acquired
+Apr 10 08:15:52 server1 sshd[1055]: Accepted publickey for user2 from 10.0.0.5 port 50222 ssh2
+Apr 10 08:15:55 server1 sshd[1055]: Failed password for user2 from 10.0.0.5 port 50222 ssh2
+Apr 10 08:15:58 server1 app[3301]: INFO Processing request ID=abc123
+Apr 10 08:16:01 server1 app[3301]: ERROR Timeout while calling external API
+Apr 10 08:16:03 server1 app[3301]: INFO Retrying request ID=abc123
+Apr 10 08:16:06 server1 app[3301]: ERROR Timeout while calling external API
+Apr 10 08:16:08 server1 app[3301]: CRITICAL External API unreachable
+Apr 10 08:16:10 server1 nginx[2045]: 502 Bad Gateway
+Apr 10 08:16:12 server1 nginx[2045]: ERROR upstream connection failed
+Apr 10 08:16:15 server1 kernel: [12347.987654] Disk sda1: I/O error
+Apr 10 08:16:18 server1 kernel: [12348.111213] EXT4-fs error (device sda1): ext4_find_entry:1453: inode #2: comm app: reading directory lblock 0
+Apr 10 08:16:20 server1 systemd[1]: systemd-journald.service: Failed with result 'timeout'
+Apr 10 08:16:22 server1 systemd[1]: systemd-journald.service: Restarting
+Apr 10 08:16:25 server1 systemd[1]: Started systemd-journald.service
+Apr 10 08:16:28 server1 app[3301]: INFO Service recovered successfully
+Apr 10 08:16:30 server1 docker[4123]: INFO Container health check passed
+Apr 10 08:16:32 server1 sshd[1100]: error: maximum authentication attempts exceeded for user root
+Apr 10 08:16:35 server1 sshd[1100]: Connection closed by authenticating user root 192.168.1.50
+Apr 10 08:16:38 server1 cron[2001]: INFO Running scheduled backup job
+Apr 10 08:16:40 server1 cron[2001]: ERROR Backup failed due to insufficient disk space
+Apr 10 08:16:42 server1 cron[2001]: WARNING Retrying backup job
+Apr 10 08:16:45 server1 cron[2001]: CRITICAL Backup job failed after retries
+Apr 10 08:16:48 server1 systemd[1]: backup.service: Failed with result 'exit-code'
+Apr 10 08:16:50 server1 systemd[1]: backup.service: Scheduled restart job
+Apr 10 08:16:52 server1 systemd[1]: Started backup.service
